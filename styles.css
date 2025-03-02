@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: left;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#topSection {
+  display: flex;
+  align-items: center; 
+}
+
+#sideMenu {
+  width: 240px;
+  height: 330px;
+  background: #fffeba;
+  padding: 15px;
+  margin-left: 30px;
+  margin-right: 150px;
+  border-radius: 8px;
+  align-items: flex;
+}
+
+#sideMenu h3 {
+  margin-top: 0;
+  font-size: 20px;
+  padding-left: 0px;
+}
+
+#sideMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sideMenu ul li {
+  margin: 8px 0;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+#sideMenu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#sideMenu ul li a:hover {
+  color: #5c8600;
+}
+
+#pageIntro {
+  flex: 1; /* Allows the intro to take up remaining space */
+}
+
+h1, h2 {
+  margin: 7;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: black;
+  text-align: left;
+}
+
+h3 {
+  color: black;
+  margin: 5;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+}
+
+h4 {
+  color: #5c8600;
+  margin: 5;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+}
+
+h5 {
+  color: black;
+  font-size: 15px;
+  margin: 5;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+}
+
+#Introduction  {
+  width: 100%; /* Makes image responsive */
+  max-width: 800px; /* Prevents it from getting too large */
+  height: auto; /* Keeps aspect ratio */
+  margin: 20px auto; /* Centers the image */
+  display: block;
+}
+
+#Pinterest_Annotated, #Apple_Annotated, #Duolingo_Annotated, #Keyboard_Interaction, #Mouse_Interaction,  
+#Keyboard_Interaction_Trade, #Mouse_Interaction_Trade,
+#Initial_State_Redesign_One, #Initial_State_Redesign_Two  {
+  width: 100%; /* Makes image responsive */
+  max-width: 1000px; /* Prevents it from getting too large */
+  height: auto; /* Keeps aspect ratio */
+  margin: 20px auto; /* Centers the image */
+  display: block;
+}
+
+#redesignOne, #redesignTwo {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 40px; /* Adds left and right padding */
+  box-sizing: border-box; /* Ensures padding doesn't affect width calculations */
+}
+
+#interactionContainer, #redesignsContainer {
+  display: flex;
+  gap: 20px; /* Adds spacing between the two sections */
+  justify-content: center; /* Centers them horizontally */
+  align-items: flex-start; /* Aligns them at the top */
+}
+
+/* Divider line */
+.divider {
+  width: 2px; /* Thickness of the line */
+  background-color: #ccc; /* Light gray color */
+  height: 100%; /* Make it full height of the container */
+  align-self: stretch; /* Ensures it stretches to match content height */
+}
+
+#mouseInteract, #mouseInteractTrade {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 40px; /* Adds left padding */
+}
+
+#keyInteract, #keyInteractTrade {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px; /* Adds right padding */
+}
+
+#comparisonTable {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  table-layout: auto; /* Allows first column to adjust dynamically */
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  font-size: 16px;
+}
+
+td:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  color: #5c8600;
+  width: 1%; /* Ensures it expands only as much as necessary */
+  white-space: nowrap; /* Prevents unnecessary wrapping */
+}
+
+td:nth-child(n+2) { /* Targets Pinterest, Duolingo, and Apple Settings columns */
+  width: calc((100% - auto) / 3); /* Distributes remaining space equally */
+  font-size: 14px;
+}
