@@ -1,179 +1,487 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  text-align: left;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #e4013a; 
+  color: white;
+}
+
+.container {
+  z-index: 1;
+  perspective: 2000px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.2); /* Adjust the scale factor as needed */
+  transform-origin: center;
+}
+
+#mainContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px; /* Adds spacing between elements */
+  width: 100%;
+  padding: 20px;
 }
 
 #topSection {
   display: flex;
   align-items: center; 
-}
-
-#sideMenu {
-  width: 240px;
-  height: 330px;
-  background: #fffeba;
-  padding: 15px;
-  margin-left: 30px;
-  margin-right: 150px;
-  border-radius: 8px;
-  align-items: flex;
-}
-
-#sideMenu h3 {
-  margin-top: 0;
-  font-size: 20px;
-  padding-left: 0px;
-}
-
-#sideMenu ul {
-  list-style: none;
-  padding: 0;
-}
-
-#sideMenu ul li {
-  margin: 8px 0;
-  font-size: 25px;
-  text-decoration: underline;
-}
-
-#sideMenu ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-#sideMenu ul li a:hover {
-  color: #5c8600;
+  flex-wrap: wrap;
 }
 
 #pageIntro {
-  flex: 1; /* Allows the intro to take up remaining space */
+  flex: 1;
 }
 
-h1, h2 {
+#annotations, #interviewquestions, #interviewresponses, #storyboarding, #reflections {
+  width: 90%;
+  margin: 50px auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+h1 {
   margin: 7;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 200px;
+  font-size: 50px;
   color: black;
   text-align: left;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+h2 {
+  margin: 7;
+  padding-left: 50px;
+  padding-right: 200px;
+  padding-bottom: 40px;
+  font-size: 35px;
+  color: black;
+  text-align: left;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 h3 {
   color: black;
   margin: 5;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 200px;
   text-align: left;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h4 {
-  color: #5c8600;
+  color: black;
   margin: 5;
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;
+  font-family: 'Orbitron', sans-serif;
 }
 
-h5 {
+h5, h6 {
   color: black;
   font-size: 15px;
   margin: 5;
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#Introduction  {
-  width: 100%; /* Makes image responsive */
-  max-width: 800px; /* Prevents it from getting too large */
-  height: auto; /* Keeps aspect ratio */
-  margin: 20px auto; /* Centers the image */
-  display: block;
+/* Hover effect for all circles */
+.intro-text:hover,
+.info-text:hover,
+.answers-1:hover,
+.answers-2:hover,
+.answers-3:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-#Pinterest_Annotated, #Apple_Annotated, #Duolingo_Annotated, #Keyboard_Interaction, #Mouse_Interaction,  
-#Keyboard_Interaction_Trade, #Mouse_Interaction_Trade,
-#Initial_State_Redesign_One, #Initial_State_Redesign_Two  {
-  width: 100%; /* Makes image responsive */
-  max-width: 1000px; /* Prevents it from getting too large */
-  height: auto; /* Keeps aspect ratio */
-  margin: 20px auto; /* Centers the image */
-  display: block;
-}
-
-#redesignOne, #redesignTwo {
-  flex: 1;
-  min-width: 300px;
-  padding: 0 40px; /* Adds left and right padding */
-  box-sizing: border-box; /* Ensures padding doesn't affect width calculations */
-}
-
-#interactionContainer, #redesignsContainer {
+/* Pink Circle */
+.intro-text {
+  width: 450px;
+  height: 450px;
+  background-color: #f297bf;
+  color: black;
+  font-size: 20px;
+  line-height: 1.6; /* Increases spacing between lines */
+  font-weight: 500;
+  border-radius: 50%;
   display: flex;
-  gap: 20px; /* Adds spacing between the two sections */
-  justify-content: center; /* Centers them horizontally */
-  align-items: flex-start; /* Aligns them at the top */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  top: -80px; /* Moves it up */
+  left: -50px; /* Moves it slightly left */
 }
 
-/* Divider line */
-.divider {
-  width: 2px; /* Thickness of the line */
-  background-color: #ccc; /* Light gray color */
-  height: 100%; /* Make it full height of the container */
-  align-self: stretch; /* Ensures it stretches to match content height */
+/* Red Circle - Larger & Positioned to the Right */
+.info-circle {
+  position: relative;
 }
 
-#mouseInteract, #mouseInteractTrade {
-  flex: 1;
-  min-width: 300px;
-  padding-left: 40px; /* Adds left padding */
+.info-text {
+  width: 600px; /* Bigger than pink circle */
+  height: 600px;
+  background-color: #e4013a;
+  color: white;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  left: -20px; /* Slight offset to the left */
 }
 
-#keyInteract, #keyInteractTrade {
-  flex: 1;
-  min-width: 300px;
-  padding-right: 40px; /* Adds right padding */
+/* Adjust list styling inside the red circle */
+.info-text ul {
+  list-style: inside;
+  text-align: left;
+  padding: 0;
+  margin-left: 25px;
+  font-size: 35px;
+  line-height: 1.6; /* Increases spacing between lines */
 }
 
-#comparisonTable {
+.info-text li {
+  font-size: 25px;
+  margin-left: 15px;
+  line-height: 1.6; /* Increases spacing between lines */
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Adjust spacing between circles */
+  margin-top: 50px;
+  flex-wrap: wrap; /* Ensures proper stacking on smaller screens */
+  position: relative;
+}
+
+#interviewresponses h3,
+#empathymaps h3 {
+  font-weight: normal;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.circle-answers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Adjust spacing between circles */
+  margin-top: 50px;
+  flex-wrap: wrap; /* Ensures proper stacking on smaller screens */
+  position: relative;
+}
+
+/* Pink Circle */
+.answers-1 {
+  width: 850px;
+  height: 850px;
+  background-color: #f297bf;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  top: -80px; /* Moves it up */
+  left: -50px; /* Moves it slightly left */
+}
+
+.answers-1 h3 {
+  font-size: 20px;
+}
+.answers-1  ul {
+  list-style: inside;
+  text-align: left;
+  padding-left: 40px; /* Pushes the bullet points inward */
+  font-size: 16px;
+  line-height: 1.6; /* Increases spacing between lines */
+}
+.answers-1 li {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.6; /* Increases spacing between lines */
+}
+
+.answers-2 {
+  width: 950px; /* Bigger than pink circle */
+  height: 950px;
+  background-color: #e4013a;
+  color: white;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 30px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  left: 20px; /* Slight offset to the left */
+  top: 40px; /* Moves it up */
+}
+
+.answers-2 h3 {
+  list-style: inside;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 24px;
+}
+
+/* Adjust list styling inside the red circle */
+.answers-2 ul {
+  list-style: inside;
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 50px;
+  font-size: 18px;
+  line-height: 1.6; /* Increases spacing between lines */
+}
+
+.answers-2 li {
+  font-size: 18px;
+  padding-left: 60px;
+  padding-right: 60px;
+  line-height: 1.6; /* Increases spacing between lines */
+}
+
+.answers-3 {
+  width: 700px; /* Bigger than pink circle */
+  height: 700px;
+  background-color: #e50595;
+  color: white;
+  font-weight: 500;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  top: -170px;
+  left: -170px; /* Slight offset to the left */
+}
+
+.answers-3 h3 {
+  list-style: inside;
+  text-align: left;
+  padding: 0;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+/* Adjust list styling inside the red circle */
+.answers-3 ul {
+  list-style: inside;
+  text-align: left;
+  padding: 0;
+  padding-left: 40px; /* Pushes the bullet points inward */
+  font-size: 18px;
+  line-height: 1.6; /* Increases spacing between lines */
+}
+
+.answers-3 li {
+  font-size: 18px;
+  margin-left: 15px;
+  margin-right: 15px;
+  line-height: 1.6; /* Increases spacing between lines */
+}
+
+#empathymaps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#empathymaps h2,
+#storyboarding h2 {
+  padding-top: 0;
+  padding-bottom: 10px;  /* Reduce spacing under Empathy Maps */
+  margin-bottom: 10px;  /* Reduce extra spacing */
+}
+
+#storyboarding h2 {
+  padding-top: 0;
+  padding-left: 200px;  /* Reduce spacing under Empathy Maps */
+  padding-bottom: 10px;  /* Reduce spacing under Empathy Maps */
+  margin-bottom: 10px;  /* Reduce extra spacing */
+  font-size: 35px;
+  color: black;
+  text-align: left;
+  font-family: 'Chakra Petch', sans-serif;
   width: 100%;
-  max-width: 1100px;
+}
+
+#empathymaps h3 {
+  padding-left: 300px;  /* Reduce spacing under Empathy Maps */
+  margin-right: 10px;  /* Reduce extra spacing */
+}
+
+#storyboarding h3 {
+  padding-left: 200px;  /* Reduce spacing under Empathy Maps */
+  margin-right: 10px;  /* Reduce extra spacing */
+  font-weight: normal;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#empathymaps img {
+  width: 45%;
+  max-width: 700px;
   height: auto;
-  margin: 20px auto;
+}
+
+#Interface_Annotation,
+#Storyboard {
+  width: 80%; /* Adjust width as needed */
+  max-width: 3000px; /* Prevents it from getting too large on big screens */
+  display: block;
+  margin: 30px auto; /* Centers the image horizontally */
+  margin-bottom: 0;  /* Reduce space under the image */
+}
+
+#User_1_Persona,
+#User_2_Persona {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: auto;
-  table-layout: auto; /* Allows first column to adjust dynamically */
+#interviewresponses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-th, td {
-  border: 1px solid black;
-  padding: 10px;
+#interviewresponses h2,
+#empathymaps h2 {
+  padding-left: 300px;
+  padding-right: 200px;
+  font-size: 35px;
+  color: black;
   text-align: left;
+  font-family: 'Chakra Petch', sans-serif;
+  width: 100%;
 }
 
-th {
-  font-size: 16px;
-}
-
-td:first-child {
+.user-label {
+  font-style: italic;
+  text-decoration: underline;
   font-weight: bold;
-  font-size: 16px;
-  color: #5c8600;
-  width: 1%; /* Ensures it expands only as much as necessary */
-  white-space: nowrap; /* Prevents unnecessary wrapping */
+  font-style: italic;
+  text-align: left;
+  font-size: 24px;
+  color: #e4013a;
+  line-height: 1.8;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-td:nth-child(n+2) { /* Targets Pinterest, Duolingo, and Apple Settings columns */
-  width: calc((100% - auto) / 3); /* Distributes remaining space equally */
-  font-size: 14px;
+.user-text {
+  font-style: normal; 
+  font-weight: bold;
+  text-align: left;
+  font-size: 20px;
+  color: #e4013a;
+  line-height: 1.8;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.user_obs_container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.user_obs {
+  width: 600px;
+  height: 600px;
+  background-color: #f297bf;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user_obs:hover {
+  transform: scale(1.3);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.user_obs ul {
+  text-align: left;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.user_obs li {
+  font-weight: normal;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.8; /* More spacing between lines for better readability */
+  margin-left: 20px;
+  margin-right: 10px;
 }

@@ -13,394 +13,117 @@
     <link rel="stylesheet" href="styles.css" /> 
   </head>
 
-  <!-- page content goes into <body> -->
-    <body>
-      <div id="title">
-        <h1>Accessible Components: Radio Buttons</h1>
-      </div>
-
-    <div id="topSection">
-      <div id="sideMenu">
-        <h3>Go to Different Parts of this Design Investigation</h3>
-        <ul>
-          <li><a href="#pinSection">Pinterest</a></li>
-          <li><a href="#duoSection">Duolingo</a></li>
-          <li><a href="#appleSection">Apple Settings</a></li>
-          <li><a href="#comparisonTable">Comparison Table</a></li>
-          <li><a href="#stateModels">State Models</a></li>
-          <li><a href="#reflection">Reflection</a></li>
-        </ul>
-      </div>
-      
-      <div id="pageIntro">
-        <img id="Introduction" alt="Radio Icon site introduction" src="./assets/Radio_Intro.png"/>
-      </div>
-      </div>
-        <h3> Ted Kaehler introduced the metaphor into the digital realm with the 
-          <a href="https://skeuomorphic.design/p/from-paper-ballots-to-pixels-tracing">BitRectEditor for Smalltalk</a> 
-          in 1975, allowing users to select one option from a set. For some time most designs 
-          included little circles to select one option, as most have experienced in a 
-          <a href="https://support.google.com/webdesigner/answer/9079192?hl=en">Google Form</a>. 
-          Now we see how radio buttons designers use icons and different sizes to create intuitive & accessible designs. 
-        </h3>
-        <h2>This exploration will look at how Pinterest, Duolingo, and Apple’s Settings 
-          have all tailored the design of radio buttons for different interaction purposes.</h2>
-      <div>
+  <body>
+    <div id="title">
+      <h1>Personas and Storytelling</h1>
     </div>
 
-    <div id="pinSection">
-      <h2>Pinterest</h2>
-      <h3>The Use of Original Radio Buttons</h3>
-
-      <h4>Pinterest does not use many radio buttons, their designs mainly include dropdowns and multi-selects.
-        I have chosen to analyze this one use of radio buttons to understand why it is the only time 
-        this component is implemented in core design of their User Interface. </h4>
-
-      <img id="Pinterest_Annotated" alt="Pinterest Radio Buttons Annotated" src="./assets/Pinterest_Annotated.png"/>
-    </div>
-
-    <div id="duoSection">
-      <h2>Duolingo</h2>
-      <h3>The Use of Radio Buttons with Numbering and Tag Containers</h3>
-
-      <h4>Duolingo uses many different forms of radio buttons, including those with easy-to-understand icons as tag options,
-        as well as numbering the available options to users. In this case I have decided to analyze one form of their many radio button
-        designs where the buttons themselves are numbers, and how this affects learnability and accessibility. </h4>
-      <img id="Duolingo_Annotated" alt="Duolingo Radio Buttons Annotated" src="./assets/Duolingo_Annotated.png"/>
-    </div>
-
-    <div id="appleSection">
-      <h2>Apple Settings</h2>
-      <h3>Challenging what a Radio Button looks like with Colorful Tag Options</h3>
-
-      <h4>Finally I chose Apple's Desktop Settings, as the design challenges what a traditional radio button can look like
-        the most out of all three applications. The classic radio button is used, as seen in my annotations. However
-        there are other designs mixed in including previews of what pressing each radio button option will result in,
-        as well as making the button itself correspond to the value users are selecting (color buttons). </h4>
-      <img id="Apple_Annotated" alt="Apple Settings Radio Buttons Annotated" src="./assets/Apple_Settings_Annotated.png"/>
-    </div>
-
-    <div id="comparisonTable">
-      <h2>Comparing Outputs of all Three Implementations</h2>
-      <h4>After annotating some key observations from the design implementation of radio buttons for each user interface,
-        I wanted to understand what the key interaction differences were for each application for mousepad, keyboard, and, mobile/touch users.
-        I focused on how good and sometimes lacking implementations also affected learnability, memorability, efficiency, and accessibility.
-      </h4>
-
-      <table border="1">
-        <tr>
-          <th>Feature</th>
-          <th>Pinterest</th>
-          <th>Duolingo</th>
-          <th>Apple Settings</th>
-        </tr>
-        <tr>
-          <td>Mouse Touchpad </td>
-          <td> 
-            <ul>
-              <li>
-                Upon searching a keyword using the search bar, a series of filters appears at the top of the search results. 
-                One clicks on the “Filter” tool, which makes a radio button selection appear. 
-              </li>
-              <li>
-                You can click on every content option by either using the radio button itself on the right hand side. 
-                The clickable target area is larger including the options’ words (e.g. Videos) which makes it easier for 
-                users to interact with. The chosen option’s word also becomes bolded.
-              </li>
-              <li>
-                The radio button filter is only applied once users hit “Apply” at the bottom of the side menu. 
-                This is not intuitive at first since this button appears to be separate from the radio button selection, 
-                as visually it is much further down the sidebar menu. 
-              </li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                In the initial state, none of the buttons are selected. 
-              </li>
-              <li>
-                When hovering between options, users don’t have to hover over the number, rather the entire container option works. 
-                The container is much larger than the numbers & each label tag making it more accessible to different mouse users.
-              </li>
-              <li>
-                When clicking on a button, the drop shadow disappears until the click is released.
-                This makes the container bounce when clicked on, adding an additional queue to users.
-              </li>
-              <li>
-                Once one option is selected, users have no way of clicking away back to the initial state. 
-                This increases learnability as it’s signaled to users they must submit one of the radio button options.
-              </li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                In the initial state, one of the settings is already selected. 
-                This increases learnability as users are automatically able to grasp that they must select one of the options. Having a default selected option can help. 
-              </li>
-              <li>
-                For the color selection, the color of the button itself aligns with the selection increasing memorability of the component. 
-              </li>
-              <li>
-                All the radio buttons have default choices set, which helps users understand that they can select the other options, by clicking over the image. 
-              </li>
-              <li>
-                The classic looking radio buttons are the hardest to click on because of small text size and button size.
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Keyboard</td>
-          <td>
-            <ul>
-              <li>
-                F + Enter – to access the pop-up radio buttons in the first place. 
-                Then pressing the Pageup & Pagedown keys makes users scroll through the image gallery on the right rather than the filters themselves.
-              </li>
-              <li>
-                This component is not accessible as the keyboard only works in conjunction with the mouse
-              </li>
-              <li>
-                Hitting the esc key does not clear the selected option or go to the clear all button at the top of the radio buttons 
-              </li>
-              <li>
-                Choosing between the radio buttons with Pageup and Pagedown keys only works when the radio buttons are activated first with a mouse press. 
-                Choosing between buttons works but submitting the filter with the Enter key does not work. 
-              </li>
-              <li>
-                As a standalone feature it misses the connection between opening the radio buttons, and then being able to use them.
-                This majorly affects accessibility for these types of users.
-              </li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                Click on the number in the keyboard to choose between the number on the list, 
-                makes this perhaps more accessible than just having the dots/targets in a classic radio button selection.
-              </li>
-              <li>
-                Hitting the esc key does not clear the selected option or go to the clear all button at the top of the radio buttons. 
-              </li>
-              <li>
-                Not possible to deselect an option once selected (1,2, or 3). 
-                You cannot deselect one component – once you select a component you can switch to another option but you cannot fully deselect
-              </li>
-              <li>
-                No hovering over feature available with the keyboard version, rather clicking on numbers selects the option for you.
-              </li>
-              <li>
-                Does not work with Pageup and Pagedown keys to select options, as well as awsd options – not necessarily intuitive that one should be pressing 123 
-              </li>
-              <li>
-                Pageup/down keys do become activated after users start the selection by pressing either 1/2/3 as an option – then users can select using either key group.
-              </li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                There is minimal keyboard navigation available which majorly hinders accessibility. 
-              </li>
-              <li>
-                Any keyboard actions only work for navigating through the sidebar menu of Apple Settings rather than the page with the different radio buttons themselves. 
-              </li>
-              <li>
-                Even upon initializing the interaction with a set of radio buttons using a mouse, it did not work continuing to navigate using Pageup/Pagedown or numbers.
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td>Touch (Mobile Version) </td>
-          <td>
-            <ul>
-              <li>
-                The total clickable area extends to the button itself and the label tag, like in the desktop version 
-              </li>
-              <li>
-                The label tag is not bolded when selected, unlike the desktop version. This inconsistency affects memorability for users between the desktop vs mobile version.
-              </li>
-              <li>
-                The size of the button targets themselves is smaller on the mobile version.
-              </li>
-              <li>
-                Everytime the radio button selection is submitted, the radio pop-up disappears and the search results are filtered.
-                This affects the efficiency, as this includes steps in the workflow when users want to toggle between labels.
-              </li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                The interaction lacks intuition as every time users select which radio button they are interested in, the radio button popup disappears and filters the results. 
-              </li>
-              <li>
-                The mobile version does not have the text bolded of the selected label tag the way the desktop version does, which decreases accessibility for mobile users. 
-              </li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-              <li>
-                There is no exact mobile version of the “Appearance” tab on Apple’s Mobile settings, 
-                though there are some other uses of radio buttons. 
-              </li>
-              <li>
-                The clickable area for all radio buttons is large making it accessible for different users. 
-              </li>
-              <li>
-                Most of the mobile radio buttons also use previews that can also be clicked on, 
-                which makes it very intuitive for users to understand what they are selecting. 
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div id="stateModels">
-      <h3>State Models of the Interaction: helps visualize how a user may interact with the component as it currently exists.</h3>
-      <h4> I have chosen to analyze this interaction on Duolingo, since this design is the most accessible to keyboard users.
-        The specific implementations of radio buttons I annotated on Pinterest and Apple Settings have several gaps in their interactions.  
-      </h4>
-      <div id="interactionContainer">
-        <div id="mouseInteract">
-          <h3>Mouse Interaction State Model</h3>
-          <img id="Mouse_Interaction" alt="Mouse Radio Buttons Annotated" src="./assets/Mouse_Diagram.png"/>
-        </div>
-        <div class="divider"></div>
-        <div id="keyInteract">
-          <h3>Keyboard Interaction State Model</h3>
-          <img id="Keyboard_Interaction" alt="Keyboard Radio Buttons Annotated" src="./assets/Keyboard_Diagram.png"/>
+    <div class="circle-container">
+      <!-- Pink Circle for Intro -->
+      <div class="intro-container">
+        <div class="intro-text">
+          <ul>This design exploration will focus on the public interface of library self-checkout stations. 
+          Found in libraries like the Rockefeller at Brown University, these allow patrons to check out books without assistance from a librarian.
+          </ul>
         </div>
       </div>
-      <h2>State Models with Intentional Trade-offs</h2>
-      <h4> I now revised my state models, making an intentional trade-off that affects how we value 
-        the components' learnability, memorability, efficiency, and accessibility. 
-        This could mean making the component more usable for screen reader and keyboard users
-        rather than for repeated mouse users, which is a design trade-off for those users.
 
-        The main change is that when keyboard users want to escape the selection they may do so by hitting the escape button.
-        This does however mean that whenever mouse users stop their selection and click elsewhere on the screen, the selection will 
-        refresh and they will have to restart choosing which radio button.
-      </h4>
-      <div id="interactionContainer">
-        <div id="mouseInteractTrade">
-          <h3>Mouse Interaction Tradeoff Model</h3>
-          <img id="Mouse_Interaction_Trade" alt="Mouse Radio Buttons Annotated" src="./assets/Radio_Mouse_Redesign.png"/>
-        </div>
-
-        <div id="keyInteractTrade">
-          <h3>Keyboard Interaction Tradeoff Model</h3>
-          <img id="Keyboard_Interaction_Trade" alt="Keyboard Radio Buttons Annotated" src="./assets/Radio_Key_Redesign.png"/>
+      <!-- Red Circle for Key Insights -->
+      <div class="info-circle">
+        <div class="info-text">
+          <ul>Through this design research I will:<ul>
+          <ul>
+            <li>Step into user’s shoes and behaviors</li>
+            <li>Observe and interview users’ on their experiences</li>
+            <li>Illustrate user interactions with Personas</li>
+            <li>Narrate users’ end-to-end journey through storyboarding</li>
+          </ul>
         </div>
       </div>
-      <h2>Redesigning a Component</h2>
-      <div id="redesignsContainer">
-        <div id="redesignOne">
-          <h3>Initial State Redesign: Duolingo</h3>
-          <h4>
-            This redesign of the initial state helps users understand that a selection is required with radio buttons. The design should also signal that these
-            options/tags are mutually exclusive, meaning that they must click between these.
-          </h4>
-          <h5>
-            
-            Having one preselected option may help first-time users understand that one needs to be selected. The additional proposal of having 
-            the buttons rotate in being highlighted helps learnability and memorability. First-time users can understand that they can toggle 
-            between options as much as they like. 
-            For increasing accessibility, when changing between highlighting button options, the keyboard keys to do so could be displayed on the screen.
-          </h5>
-          <img id="Initial_State_Redesign_One" alt="Initial State Redesign of Duolingo" src="./assets/Duolingo_Initial_Redesign.png"/>
+    </div>
+  
+    <div id="annotations">
+      <h2>I started this exploration by annotating some of the key features of this public interface</h2>
+      <img id="Interface_Annotation" alt="Annotations of Interface Interations" src="./assets/Interface_Annotated.png"/>
+    </div>
+
+    <div id="interviewquestions">
+      <h2>After each interaction, I interviewed each user on their interaction with the self-check out station. Here are the key take-aways:</h2>
+    
+      <!-- Circle container for Questions 1-8 -->
+      <div class="circle-answers">
+        <!-- First Circle (Questions 1-2) -->
+        <div class="answers-1">
+          <h3>1. Have you used this checkout station before?</h3>
+          <ul>
+            <li>Some users were unaware of the self-checkout option or found it confusing due to prior word-of-mouth experiences.</li>
+            <li>Others had used it occasionally, preferring human interaction over automation.</li>
+          </ul>
+          <h3>2. If so, how often, and what has your previous experience been like?</h3>
+          <ul>
+            <li>Users who had used it before did so only when staff weren’t available.</li>
+            <li>Prior experience sometimes helped them anticipate the process (e.g., from observing librarians), but the interface still caused confusion.</li>
+          </ul>
+          <h3>3. If not, what did you expect the checkout process to involve?</h3>
+          <ul>
+            <li>Assumed it would involve scanning the book but did not expect needing to scan an ID first.</li>
+            <li>Lack of prior awareness of the self-checkout station contributed to initial confusion.</li>
+          </ul>
         </div>
-        
-        <div class="divider"></div>
-        
-        <div id="redesignTwo">
-          <h3>Additional State Re-Design: Pinterest Explicit Clickable Target</h3>
-          <h4>
-            This redesign of the interaction with the selected (active) button enhances efficiency and learnability, as there were some 
-            flaws in the design noted in my annotations.
-          </h4>
-          <h5>
-            I eliminated an unneccessary workflow with the "Clear All" button. Clicking on this button would bring users back to the "All Pins" button 
-            within the radio selection. The design can simply have the "All Pins" without this additional button, as clearing does 
-            not actually clear the selection it just brings
-            users back to the default option. As for learnability, using a border like Duolingo to signify the total clickable area makes it 
-            more obvious which button is selected and where mouse users can click.
-          </h5>
-          <img id="Initial_State_Redesign_Two" alt="Additional State Redesign of Pinterest" src="./assets/Pinterest_Add_Redesign.png"/>
+    
+        <!-- Second Circle (Questions 3-5) -->
+        <div class="answers-2">
+          <h3>4. Could you walk me through the checkout process?</h3>
+          <ul>
+            <li>Users followed expected steps but encountered issues with barcode placement, ID scanning, and machine responses.</li>
+            <li>The distinction between different components (screen vs. scanner) was unclear to some users.</li>
+          </ul>
+          <h3>5. Would you describe the checkout process as frictionless?</h3>
+          <ul>
+            <li>No—users encountered multiple points of confusion, especially with barcode placement and feedback cues.</li>
+            <li>Some experienced failed attempts before successfully checking out.</li>
+          </ul>
+          <h3>6. If not in which part of the process did you experience that friction on what to do next?</h3>
+          <ul>
+            <li>The green light gave misleading feedback, making users think the checkout was complete when it wasn’t.</li>
+            <li>The number of instructional stickers caused information overload instead of clarity.</li>
+            <li>Uncertainty about whether the screen and scanner were part of the same system.</li>
+          </ul>
+        </div>
+    
+        <!-- Third Circle (Questions 6-8) -->
+        <div class="answers-3">
+          <h3>7. Did the interface have all the available features you expected? Why or why not?</h3>
+          <ul>
+            <li>While it had all the necessary functions, users found it cluttered or counterintuitive.</li>
+            <li>Some instructions were helpful, but others (like excessive labels) contributed to confusion.</li>
+          </ul>
+          <h3>8. Do you think you could have completed the checkout process without the on-screen instructions or labels? Why or why not?</h3>
+          <ul>
+            <li>Some users thought they could have figured it out eventually, especially if they had prior exposure to librarians checking out books.</li>
+            <li>Others might have assumed the checkout was complete due to misleading visual cues.</li>
+          </ul>
         </div>
       </div>
-      
+    </div>
+    
 
-      <div id="reflection">
-      <h2>Reflection</h2>
-      <h3> Watching
-            <a href="https://www.youtube.com/watch?v=-iccWRhKZa8">Kat Holmes’ Talk on Rethinking Inclusive Design </a> 
-            informed how I reflect on the outcome of this project to answer the following questions: 
-        </h3>
-        <h4>
-          Key Guiding Questions:
-          <li>
-            Where did the components you observed do well in terms of usability and accessibility? How have you applied this to your design?
-          </li>
-          <li>
-            Are there accessibility considerations that were not addressed that you accounted for in your own design?
-          </li>
-          <li>
-            How does the change you’ve made in your own design solve for a “mismatch” in our world?
-          </li>
-        </h4>
-
-        <h5>
-          Some key takeaways include: The components observed across Duolingo, Pinterest, and Apple’s Settings had 
-          different strengths in usability and accessibility. For example, Pinterest’s radio buttons extended 
-          the clickable area beyond just the button, including the text label, making selection easier.
-          Duolingo provided a large clickable area and better keyboard navigation compared to the other two implementations.
-          I applied Duolingo's boxed clickable areas to redesigning Pinterest's interaction.
-          Apple Settings was the most creative with their interpretations of radio buttons. Their designs also set default states
-          signify to new users that a mutually exclusive selection must be made.
-        </h5>
-        <h5> There were many accessibility concerns that were not addressed in my design exploration. 
-          In the case of Apple Settings for instance, most of the keyboard functionalities were lacking. 
-          This redesign would include redesigning multiple interactions at once as I was looking at a page with multiple 
-          different radio button types used. Most importantly, as we saw with the trade-off exercise, it's hard to
-          address some design elements that make it easier for keyboard users, but then change mouse functionalities.
-        </h5>
-        <h5>
-          Kat Holmes’ concept of "mismatch" highlights how design choices can exclude users with different abilities. 
-          A major mismatch I identified was the lack of a way to deselect a previously selected option in most designs. 
-          This limitation forced users to always have a selection, 
-          which might not align with all use cases. My design includes an explicit way to "clear selection" in the trade-off section to allow users more flexibility.
-        </h5>
-
-        <h4>
-          Going back my exploration, I want to give two examples of how the accessibility/inaccessibility of those inputs or outputs 
-          could also impact users with impairments either positively or negatively.
-          The major accessibility issue observed was limited keyboard navigation. 
-          Many of the tested interfaces did not allow full navigation via keyboard alone, 
-          making them inaccessible for users who rely on assistive technologies. 
-          In my design, I ensured that users could navigate the radio buttons using only the keyboard 
-          (arrow keys, Enter key for selection, and Esc to clear the selection if applicable).
-
-          When evaluating interaction costs, the size of the target is crucial. 
-          Since radio buttons are naturally small, they can be difficult to click or tap. 
-          Expanding the target area improves usability, making selection easier. 
-          Users should be able to select an option not only by clicking the circle but also by clicking the associated label.
-        </h4>
-
-
-        <h4>
-          This exploration has taught me that mouse users are of top priority in the process of designing components. 
-          This has clearly been displayed in the case of radio buttons, where it's hard to transfer that same level 
-          of intiution for first time users and maintain learnability for keyboard users for instance. 
-          Touch and mobile is easier to adjust for a component like Radio Buttons. It's hard to transfer the 
-          mutually exlusive nature of radio buttons to screenreaders for instance, as they may only read each word
-          individually rather than as a list of options. This has a major impact on users outside of the mouse interaction.
-        </h4>
-      </div>
-    </body>
+  
+    <div id="empathymaps">
+      <h2>Empathy Maps</h2>
+      <h3>
+        The next step in my exploration was creating personas that are not actual people but I synthesized directly from observations of the interviewed users. 
+        One of the key goals through this exercise was to summarize the distinct set of behavioral patterns regarding the use of public interface. 
+      </h3>
+      <img id="User_1_Persona" alt="Persona/Empathy Map of User 1" src="./assets/User_1_Persona.png"/>
+      <img id="User_2_Persona" alt="Persona/Empathy Map of User 2" src="./assets/User_2_Persona.png"/>
+    </div>
+  
+    <div id="storyboarding">
+      <h2>Storyboarding</h2>
+      <h3>The final component of this analysis involved depicting one of the persona's start-to-end user journey. This reflects the goals my persona and all the steps necessary to use the interface.</h3>
+      <img id="Storyboard" alt="Storyboard based on Persona" src="./assets/Storyboard.png"/>
+    </div>
+  </body>
+  
 </html>
